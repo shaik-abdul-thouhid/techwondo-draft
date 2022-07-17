@@ -1,0 +1,30 @@
+POST http://localhost:3001/login
+Content-type: application/json
+
+{
+    "username": "user3",
+    "password": "password@user3"
+}
+
+###
+
+GET http://localhost:3001/shows
+Content-type: application/json
+authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIzIiwiaWF0IjoxNjU3NzExNDEzfQ.qbPEyvFac1rG7l2PJgTzR9rkwZaLAIA-J_Mp6pp3Nek
+
+
+###
+
+POST http://localhost:3001/shows/add
+Content-type: application/json
+authorization: BEARER eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIzIiwiaWF0IjoxNjU3NzExNDEzfQ.qbPEyvFac1rG7l2PJgTzR9rkwZaLAIA-J_Mp6pp3Nek
+
+{
+    "show": {
+        "title": "show7",
+        "streamingApp": "halo",
+        "rating": 6.7,
+        "review": "psych"
+    }
+}
+
